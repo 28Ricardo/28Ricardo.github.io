@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout example</title>
+    <style>
+        body {
+            margin: auto;
+            background-color:  #c9dcf9;
+        }
+        header, nav, article, footer {
+            background-color: 	#ffb0d9;
+            border: 5px solid #f9c9e2;
+            margin: 5px;
+            padding: 5px;
+            text-align: justify;
+        }
+        nav {
+            position: sticky;
+            top: 0px;
+
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin-left: 0px;
+            padding: 0px;
+        }
+        nav ul li {
+            list-style-type: none;
+        }
+        @media only screen and (min-width: 600px) {
+            body {
+                width: 80%;
+            }
+            #content {
+                display: flex;
+            }
+            nav {
+                position: static;
+            }
+            nav ul {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>this is a h1 in a header</h1>
+    </header>
+    <div id="content">
+        <nav>
+            <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+            </ul>
+        </nav>
+        <div id='blogs'>
+            <article>
+                <h2> blog post</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, quam a condimentum imperdiet, ipsum mauris pharetra mauris, nec tristique eros nulla vel turpis. Duis vel condimentum mauris. Nullam elementum varius ex. Maecenas nisi neque, accumsan eu consectetur non, pretium vitae ex. Phasellus tristique vestibulum leo eu scelerisque. Nam malesuada scelerisque mauris at pharetra. Cras posuere urna ac porttitor facilisis. Fusce semper pharetra euismod. Vestibulum augue tortor, maximus eget pulvinar blandit, faucibus vitae risus. Sed vitae est rutrum, viverra enim vel, commodo sapien.</p>
+                </article>
+                <article>
+                    <h2> blog post</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, quam a condimentum imperdiet, ipsum mauris pharetra mauris, nec tristique eros nulla vel turpis. Duis vel condimentum mauris. Nullam elementum varius ex. Maecenas nisi neque, accumsan eu consectetur non, pretium vitae ex. Phasellus tristique vestibulum leo eu scelerisque. Nam malesuada scelerisque mauris at pharetra. Cras posuere urna ac porttitor facilisis. Fusce semper pharetra euismod. Vestibulum augue tortor, maximus eget pulvinar blandit, faucibus vitae risus. Sed vitae est rutrum, viverra enim vel, commodo sapien.</p>
+                </article>
+            <article>
+                <h2> blog post</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat, quam a condimentum imperdiet, ipsum mauris pharetra mauris, nec tristique eros nulla vel turpis. Duis vel condimentum mauris. Nullam elementum varius ex. Maecenas nisi neque, accumsan eu consectetur non, pretium vitae ex. Phasellus tristique vestibulum leo eu scelerisque. Nam malesuada scelerisque mauris at pharetra. Cras posuere urna ac porttitor facilisis. Fusce semper pharetra euismod. Vestibulum augue tortor, maximus eget pulvinar blandit, faucibus vitae risus. Sed vitae est rutrum, viverra enim vel, commodo sapien.</p>
+            </article>
+    </div>
+    </div>
+<footer>
+    <p> made by R.Ricardo 2025</p>
+</footer>
+</body>
+
+</html>
