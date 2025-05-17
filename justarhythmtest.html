@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Test</title>
+  <link rel="stylesheet" href="css/scriptcopy.css">
+  <style>
+    .hitZone {
+      border: 5px solid red;
+    }
+  </style>
+  <nav><a href="index.html">Home</a> | <a href="about_mebutbetter.html">About me!</a> |<a href="updatelog.html">
+    UPDATELOG</a>  <a href="justarhythmtest.html">Rhythm game!</a> (In progress..)</nav>
+</head>
+<!--  <button onclick="add(+1)"></button>
+    <script>
+      var counter = 0;
+      function counter() {
+        number++
+        document.get
+        const img = document.createElement('img');
+        img.src = 'img/splash-sparkles.webp';
+        foundImg.src = 'img/splash-sparkles.webp'
+      } this is just more progress to do (ref at the bottom of script)
+       (adding button to see if said splash effects work so i can implement it on the arrows. (if button is pressed then )-->
+
+<body>
+  <div id="judgement">
+    Judgement line for arrows
+  </div>
+
+<div id="cookieCount"></div>
+  <!-- <button onclick="increaseCookie(+1)">Click Here for Cookie!</button> -->
+  <img id="targetImage" src="" alt="">
+  <div>
+  </div>
+    <div id="bar"></div>
+</body>
+<script>
+  var cookies = 0;
+  function increaseCookie() {
+    cookies++;
+    document.getElementById("cookieCount").innerText = "Cookies: " + cookies;
+  }
+</script>
+<!-- <script>
+  let x = Math.floor((Math.random() * 10) + 1);
+  document.getElementById("demo").innerHTML = x;
+</script> -->
+<script>
+  //addEventListener checks for said event
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'd') {
+      document.body.style.backgroundColor = "red"
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'f') {
+      document.body.style.backgroundColor = "blue"
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === '`') {
+      //  const img = document.createElement('img'); //creates a new image element
+      //  img.src = 'img/arrowup.png'; // changes the 'src' property to the file
+      //  document.appendChild(img); // adds image to the page (it says only one element can be in here)
+      //OR YOU CA find the existing image
+      const foundImg = document.getElementById("targetImage");
+      foundImg.src = 'img/arrows2.png'; // changes the 'src' property to the file
+    }
+  });
+
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'k') {
+      document.body.style.backgroundColor = "pink"
+    }
+  }); 
+</script>
+<button id ='addimage' onclick="createimage()"> </button>
+create image
+<div id="note1"></div>
+<script>
+ var notes = Math.floor(Math.random() * 4)
+ if (notes > 1) {
+  const img1 = new Image(100,200);
+  img1.src = 'img/left.png';
+  document.body.appendChild(img1)
+  if (notes > 2) {
+  const img1 = new Image(300,200);
+  img1.src = 'img/up.png';
+  document.body.appendChild(img1)
+ }
+ if (notes > 3) {
+  const img1 = new Image(300,200);
+  img1.src = 'img/down.png';
+  document.body.appendChild(img1)
+ }
+ if (notes > 4) {
+  const img1 = new Image(300,200);
+  img1.src = 'img/right.png';
+  document.body.appendChild(img1)
+ }
+}
+
+</script>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid black;">
+</canvas>
+<script>
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'red';
+  ctx.fillRect(0, 0, 150, 95);
+</script>
+</html> <!--Add splash effect(to arrow) when button is pressed -->
+<!-- Then either add notes for said player to press (Arrow can approach judgement line and depending how late or early the player hits the arrow will determine rating score)-->
+<!---->

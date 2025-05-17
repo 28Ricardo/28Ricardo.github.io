@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tut</title>
+</head>
+
+<body>
+    <div> Controls D = red | f = red | j=  green | k = yellow!
+         I won't have time to do the navigation things but i will get this fix!
+    </div>
+   
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+</body>
+<script>
+
+    const distanceFromEdge = 30;
+    const speed = 10;
+
+    let score = 0;
+
+    let ticks = 0;
+
+    var c = document.getElementById("gameCanvas");
+    var ctx = c.getContext("2d");
+
+    class Arrow {
+        constructor(x) {
+            this.w = 32;
+            this.h = 32;
+            this.x = x;
+            this.y = c.height;
+            this.direction = Math.ceil(Math.random() * 4) // random 0-1, multiplied by the max limit, rounded up
+            if (this.direction == 1) {
+                this.color = "#ff0000"
+                ctx.fillRect
+            }
+            if (this.direction == 2) {
+                this.color = "#0000FF"
+               self.x=122
+
+        
+            }
+            if (this.direction == 3) {
+                this.color = "#00FF00"
+               self.x=212
+
+            }
+            if (this.direction == 4) {
+                this.color = "#FFFF00"
+                self.x=303
+            }
+        }
+
+        step() {
+            this.y -= speed;
+            if (this.y < -this.h) {
+                arrowList.splice(arrowList.indexOf(this), 1);
+            }
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.w, this.h);
+        }
+    }
+
+    var arrowList = [new Arrow(distanceFromEdge)]
+
+    // Key Presses start!]
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "d") {
+            checkArrows(1)
+        }
+        if (e.key === "f") {
+            checkArrows(2);
+        }
+        if (e.key === "j") {
+            checkArrows(3)
+        }
+        if (e.key === "k") {
+            checkArrows(4);
+        }
+    });
+// code.. arrows so that means if code changes to key then it changes to other keys.
+    function checkArrows(direction) {
+        for (const arrow of arrowList) {
+            let distance = arrow.y - distanceFromEdge;
+            
+            if (arrow.direction == direction) {
+                // arrowList.push(new Arrow(distanceFromEdge));
+                console.log(distance);
+                if (distance <= 32 && distance >= 0) {
+                    score += 32 - distance;
+                    arrowList.splice(arrowList.indexOf(arrow), 1);
+                }
+            }
+        }
+    }
+
+    function gameLoop() {
+        ticks++;
+
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, 0, c.width, c.height);
+        ctx.fillStyle = "#0000FF";
+        ctx.fillRect(distanceFromEdge - 2, distanceFromEdge - 2, 36, 36),         
+        ctx.fillRect(distanceFromEdge - -90, distanceFromEdge - 2, 36, 36);
+        ctx.fillRect(distanceFromEdge - -180, distanceFromEdge - 2, 36, 36);
+        ctx.fillRect(distanceFromEdge - -270, distanceFromEdge - 2, 36, 36);
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "48px serif";
+        ctx.fillText("Score: " + score, 300, 50);
+
+        for (const arrow of arrowList) {
+            arrow.step();
+        }
+
+        if (ticks % 30 == 0) {
+            arrowList.push(new Arrow(30));
+        }
+        if (ticks % 30 == 0) {
+            arrowList.push(new Arrow(122));
+        }
+        // if (ticks % 30 == 0) {
+        //     arrowList.push(new Arrow(212));
+        // }
+        // if (ticks % 30 == 0) {
+        //     arrowList.push(new Arrow(303));
+        // }
+
+        requestAnimationFrame(gameLoop)
+    }
+
+    gameLoop();
+</script>
+</html>

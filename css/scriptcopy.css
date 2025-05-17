@@ -1,0 +1,26 @@
+#judgement {
+    margin: 100px;
+    border: 5px solid red;
+    padding-bottom: 60px;
+    position: relative;
+}
+img {
+    margin-top: -189px;
+    position: absolute;
+    margin-left: 782px;
+}
+#bar {
+    border: 5px solid red;
+    padding-bottom: 800px;
+    padding-left: 120px;
+    padding-right: -14px;
+    width: 209px;
+    margin: -10% auto;
+}
+@keyframes mymove {
+    from {top: 1004px;}
+    to {top: 0px;}
+  }
+  notes {
+    animation: mymove 5s infinite;
+  }
