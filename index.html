@@ -4,36 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theives Den</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>real Milo website</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <header>
-        <h1> My website:3</h1>
-    </header>
-    <nav>
-        <UL>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About_me.html">about!</a></li>
-            <li><a href="game/index.html">Get to School</a></li>
-        </UL>
-    </nav>
-    <article>
-        <h2>Article 1</h2>
-        <img src="img/sanicreal.png" alt="Has Layer">
-        <p>Lorem</p>
-    </article>
-    <article>
-        <h2>Article 1</h2>
-        <img src="img/sanicreal.png" alt="Has Layer">
-        <p>Lorem</p>
-    </article>
-    <footer>
-        This website was designed wby Ricardo Rodriguez in 2025
+    <div id="top"></div>
+    <header id>This is a header for my website!</header>
+    <h1>Milo's finale</h1>
+    <div id="why">
+        <nav><a href="index.html">Home</a><a href="about_mebutbetter.html">About me!</a><!--<a href="updatelog.html">
+                UPDATELOG</a><!--><a href="Canvas.html">Own game!</a></nav>
+                <br> <em> YES THERE IS NO PICTURES HERE SINCE I FELT LAZY</em>
+                <br> THERE IS NO MOBILE SUPPORT (I WILL WORK ON THAT ONCE I GET THIS GRADED AND ME GET 100!!!)
+                <br>reasons why i should get a hundred
+                1. I like programming <br> 2. i am passionate about things i want to make <br> i literally help people because they can't use their kidney's for gods sake
+                <br> im smart and i have no life other than being on discord all day <br> and i have like 30 pogs which is a awesome acomplishment
+                <br> cause why not??
+                <br> i'm pretty awesome to
+                <br> (convinces you with my 20 point charisma skill <em>i spent all my skill points on charisma pls work :wink wink nudge nudge:</em>
 
-    </footer>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const box = document.getElementById("box");
+                const container = document.body; // Or any parent element you want
+                let randomNumber;
+
+                // Generate random number and display it on the box
+                function updateRandomNumber() {
+                    randomNumber = Math.floor(Math.random() * 100) + 1;
+
+                }
+                updateRandomNumber();
+
+                // Function to move the box to a random position within the container
+                function moveBoxToRandomPosition() {
+                    const maxX = container.offsetWidth - box.offsetWidth;
+                    const maxY = container.offsetHeight - box.offsetHeight;
+
+                    const randomX = Math.floor(Math.random() * maxX);
+                    const randomY = Math.floor(Math.random() * maxY);
+
+                    box.style.left = `${randomX}px`;
+                    box.style.top = `${randomY}px`;
+                    const delay = 2000;
+
+                }
+
+                // Event listener for mouse hover
+                box.addEventListener("mouseover", function () {
+                    updateRandomNumber(); // Update number on hover
+                    moveBoxToRandomPosition(); // Move box to a random position
+                });
+
+            });
+        </script>
+
+        <div id="box"> <button id="myButton"> Don't press.. or DIE!!</button></div>
+        <script src="script.js">
+            const button = document.getElementById('myButton');
+
+            button.addEventListener('click', function () {
+                button.style.display = 'none'; // Hides the button
+                // Alternatively, use button.style.visibility = 'hidden'; to keep the space occupied by the button
+            });
+        </script>
+        <!-- <div id="about">
+        lorem
+    </div> -->
+        <div id="down"></div>
 </body>
 
 </html>
